@@ -48,9 +48,12 @@ height:52px;
     <script>
     
         (function(){
-        var d = new Date();
-          var n = d.toLocaleDateString();
-          document.getElementById("date").innerHTML = n;
+        
+            let current_datetime = new Date()
+let formatted_date = current_datetime.getDate() + "." + (current_datetime.getMonth() + 1) + "." + current_datetime.getFullYear(); 
+console.log(formatted_date);
+
+          document.getElementById("date").innerHTML = formatted_date;
     })();
 
 
@@ -68,6 +71,7 @@ function getParameterByName(name, url = window.location.href) {
     var idNum = getParameterByName('id');
     document.getElementById("fullName").innerHTML = fullName;
     document.getElementById("idNum").innerHTML = idNum;
+
         </script>
 </body>
 </html>
